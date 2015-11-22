@@ -6,6 +6,7 @@ import android.os.IBinder;
 import android.util.Log;
 
 import com.example.android.appusagestatistics.R;
+import com.tabinsight.system.internals.PhoneDetailHelper;
 import com.tabinsights.constants.LogTags;
 import com.tabinsights.rest.EndPoints;
 import com.tabinsights.rest.RestClient;
@@ -44,10 +45,14 @@ public class ServerUploader extends Service {
             Log.d(LogTags.APP_INFO.name(), "Pushing data to server -- start");
             for(AppUseInfo record: records){
                 RestClient rc = new RestClient();
-                params[2] = "device="+"ugfte6t83wfgiwfgsigfvgsi";
-                params[3] = "access_time="+record.access_time;
-                params[4] = "app_name="+record.app_name;
-                params[5] = "use_time="+record.use_time;
+
+                PhoneDetailHelper phoneDetailHelper = new PhoneDetailHelper();
+                String deviceId = phoneDetailHelper.getUniqueId(this);
+
+                params[2] = "device=" + deviceId;
+                params[3] = "access_time=" + record.access_time;
+                params[4] = "app_name=" + record.app_name;
+                params[5] = "use_time=" + record.use_time;
                 rc.execute(params);
             }
 

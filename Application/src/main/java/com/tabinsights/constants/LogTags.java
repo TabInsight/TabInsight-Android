@@ -5,5 +5,6 @@ package com.tabinsights.constants;
  */
 public enum LogTags {
     APP_EXCEPTION,
-    APP_INFO
+    APP_INFO,
+    APP_DEBUG
 }

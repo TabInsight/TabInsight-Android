@@ -25,3 +25,17 @@ proguard/
 
 # Log Files
 *.log
+
+.idea/
+/*/local.properties
+/*/out
+/*/*/build
+/*/*/production
+*.iml
+*.iws
+*.ipr
+*~
+*.swp
+
+# Mac files
+.DS_Store
