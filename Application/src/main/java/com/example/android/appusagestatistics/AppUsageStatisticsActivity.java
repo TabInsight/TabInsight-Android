@@ -69,7 +69,7 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
 
         alarms.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                 0,
-                AlarmManager.INTERVAL_FIFTEEN_MINUTES, statCollector);
+                AlarmManager.INTERVAL_HALF_DAY, statCollector);
 
         /*
         alarms.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(),
@@ -78,12 +78,13 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
     }
 
     private void wifiPresentAlarm(Context context){
-        /*
+
         IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(WifiManager.SUPPLICANT_CONNECTION_CHANGE_ACTION);
+        intentFilter.addAction(WifiManager.SUPPLICANT_STATE_CHANGED_ACTION);
         ServerUploaderReceiver serverUploaderReceiver = new ServerUploaderReceiver();
         registerReceiver(serverUploaderReceiver, intentFilter);
-        */
+
+        /*
         Calendar updateTime = Calendar.getInstance();
         updateTime.setTimeZone(TimeZone.getTimeZone("GMT"));
         updateTime.set(Calendar.HOUR_OF_DAY, 10);
@@ -98,5 +99,7 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
         alarms.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                 0,
                 AlarmManager.INTERVAL_HOUR, statCollector);
+       */
     }
+
 }
