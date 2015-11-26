@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
-import com.tabinsights.constants.LogTags;
+import com.tabinsight.constants.LogTags;
 
 public class ServerUploaderReceiver extends BroadcastReceiver {
     public ServerUploaderReceiver() {

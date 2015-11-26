@@ -23,13 +23,14 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light" >
         <activity
-            android:name=".AppUsageStatisticsActivity"
+            android:name="com.tabinsight.usage.satistics.AppUsageStatisticsActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,6 +60,10 @@
             android:name="com.tabinsight.cronjobs.ServerUploader"
             android:enabled="true"
             android:exported="true" >
+        </service>
+        <service
+            android:name="com.tabinsight.service.DataUploaderService"
+            android:exported="false" >
         </service>
     </application>
 

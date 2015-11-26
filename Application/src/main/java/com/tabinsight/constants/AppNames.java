@@ -1,4 +1,4 @@
-package com.tabinsights.constants;
+package com.tabinsight.constants;
 
 /**
  * Created by biphilip on 10/3/15.

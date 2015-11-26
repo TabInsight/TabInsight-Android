@@ -14,17 +14,21 @@
 * limitations under the License.
 */
 
-package com.example.android.appusagestatistics;
+package com.tabinsight.usage.satistics;
 
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.UiThreadTest;
 
+import com.tabinsight.usage.satistics.AppUsageStatisticsActivity;
+import com.tabinsight.usage.satistics.AppUsageStatisticsFragment;
+import com.tabinsight.usage.satistics.StatsUsageInterval;
+
 import java.util.List;
 
 /**
- * Tests for {@link com.example.android.appusagestatistics.AppUsageStatisticsFragment}.
+ * Tests for {@link AppUsageStatisticsFragment}.
  */
 public class AppUsageStatisticsFragmentTests
         extends ActivityInstrumentationTestCase2<AppUsageStatisticsActivity> {

@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.appusagestatistics;
+package com.tabinsight.usage.satistics;
 
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
@@ -42,7 +42,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.example.android.appusagestatistics.StatsUsageInterval;
+import com.example.android.appusagestatistics.R;
 
 /**
  * Fragment that demonstrates how to use App Usage Statistics API.

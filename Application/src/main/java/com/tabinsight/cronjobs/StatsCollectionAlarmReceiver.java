@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.tabinsights.constants.LogTags;
+import com.tabinsight.constants.LogTags;
 
 public class StatsCollectionAlarmReceiver extends BroadcastReceiver {
     public StatsCollectionAlarmReceiver() {

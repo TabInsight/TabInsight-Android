@@ -1,4 +1,4 @@
-package com.example.android.appusagestatistics;
+package com.tabinsight.usage.satistics;
 
 import android.app.usage.UsageStatsManager;
 

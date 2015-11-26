@@ -8,9 +8,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.example.android.appusagestatistics.StatsUsageInterval;
-import com.tabinsights.constants.LogTags;
-import com.tabinsights.constants.WhitelisteedApps;
+import com.tabinsight.constants.LogTags;
+import com.tabinsight.constants.WhitelistedApps;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -18,8 +17,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
-import tabinsights.database.AppUseInfo;
-import tabinsights.database.AppsInfoDatasource;
+import com.tabinsight.database.AppsInfoDatasource;
 
 public class StatsCollector extends Service {
     public StatsCollector() {
@@ -41,7 +39,7 @@ public class StatsCollector extends Service {
         mUsageStatsManager = (UsageStatsManager) getSystemService(Context.USAGE_STATS_SERVICE);
         // TODO: Return the communication channel to the service.
         HashMap<String, UsageStats> usageStatsMap = getUsageStatsMap();
-        WhitelisteedApps whiteListedApps = new WhitelisteedApps();
+        WhitelistedApps whiteListedApps = new WhitelistedApps();
         List<String> packageNames= whiteListedApps.getPackageNames();
         List<String> log = new ArrayList<>();
         try {

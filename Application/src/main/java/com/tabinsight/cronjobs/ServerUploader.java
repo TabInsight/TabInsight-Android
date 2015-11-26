@@ -7,14 +7,14 @@ import android.util.Log;
 
 import com.example.android.appusagestatistics.R;
 import com.tabinsight.system.internals.PhoneDetailHelper;
-import com.tabinsights.constants.LogTags;
-import com.tabinsights.rest.EndPoints;
-import com.tabinsights.rest.RestClient;
+import com.tabinsight.constants.LogTags;
+import com.tabinsight.rest.EndPoints;
+import com.tabinsight.rest.RestClient;
 
 import java.util.List;
 
-import tabinsights.database.AppUseInfo;
-import tabinsights.database.AppsInfoDatasource;
+import com.tabinsight.database.AppUseInfo;
+import com.tabinsight.database.AppsInfoDatasource;
 
 public class ServerUploader extends Service {
     public ServerUploader() {
