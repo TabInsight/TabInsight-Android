@@ -42,7 +42,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import com.example.android.appusagestatistics.R;
+import com.tabinsight.usage.satistics.R;
 
 /**
  * Fragment that demonstrates how to use App Usage Statistics API.

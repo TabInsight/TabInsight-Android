@@ -23,7 +23,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.appusagestatistics.R;
+import com.tabinsight.usage.satistics.R;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

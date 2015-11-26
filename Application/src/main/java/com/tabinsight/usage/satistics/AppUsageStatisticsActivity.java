@@ -25,7 +25,8 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 
-import com.example.android.appusagestatistics.R;
+import com.tabinsight.usage.satistics.R;
+import com.tabinsight.cronjobs.ServerUploader;
 import com.tabinsight.cronjobs.ServerUploaderReceiver;
 import com.tabinsight.cronjobs.StatsCollectionAlarmReceiver;
 
@@ -40,8 +41,10 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRecurringAlarm(this);
-        wifiPresentAlarm(this);
+        //setRecurringAlarm(this);
+        //wifiPresentAlarm(this);
+        Intent myIntent = new Intent(this, ServerUploader.class);
+        this.startService(myIntent);
         setContentView(R.layout.activity_app_usage_statistics);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

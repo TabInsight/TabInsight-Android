@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.example.android.appusagestatistics.R;
+import com.tabinsight.usage.satistics.R;
 import com.tabinsight.system.internals.PhoneDetailHelper;
 import com.tabinsight.constants.LogTags;
 import com.tabinsight.rest.EndPoints;
@@ -30,6 +30,8 @@ public class ServerUploader extends Service {
 
     @Override
     public void onCreate() {
+
+        Log.d(LogTags.APP_DEBUG.name(), "Inside create of server uploader");
 
         appsInfoDatasource = new AppsInfoDatasource(getBaseContext());
 

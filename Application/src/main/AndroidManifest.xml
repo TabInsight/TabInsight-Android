@@ -15,7 +15,7 @@
  limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.appusagestatistics"
+    package="com.tabinsight.usage.satistics"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -60,10 +60,6 @@
             android:name="com.tabinsight.cronjobs.ServerUploader"
             android:enabled="true"
             android:exported="true" >
-        </service>
-        <service
-            android:name="com.tabinsight.service.DataUploaderService"
-            android:exported="false" >
         </service>
     </application>
 
