@@ -1,4 +1,4 @@
-package com.tabinsights.constants;
+package com.tabinsight.constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by biphilip on 10/3/15.
  */
-public class WhitelisteedApps {
+public class WhitelistedApps {
     public List<String> getAppNames(){
         AppNames[] appNames = AppNames.class.getEnumConstants();
         List<String> appNamesStr = new ArrayList<String>();
