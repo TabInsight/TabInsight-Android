@@ -54,6 +54,9 @@
             android:name="com.tabinsight.cronjobs.ServerUploaderReceiver"
             android:enabled="true"
             android:exported="true" >
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
         </receiver>
 
         <service

@@ -41,10 +41,10 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setRecurringAlarm(this);
-        //wifiPresentAlarm(this);
-        Intent myIntent = new Intent(this, ServerUploader.class);
-        this.startService(myIntent);
+        setRecurringAlarm(this);
+        wifiPresentAlarm(this);
+        //Intent myIntent = new Intent(this, ServerUploader.class);
+        //this.startService(myIntent);
         setContentView(R.layout.activity_app_usage_statistics);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
