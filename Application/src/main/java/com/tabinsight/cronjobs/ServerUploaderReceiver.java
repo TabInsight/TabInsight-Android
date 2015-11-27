@@ -8,7 +8,7 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiManager;
 import android.util.Log;
 
-import com.tabinsights.constants.LogTags;
+import com.tabinsight.constants.LogTags;
 
 public class ServerUploaderReceiver extends BroadcastReceiver {
     public ServerUploaderReceiver() {
@@ -19,8 +19,15 @@ public class ServerUploaderReceiver extends BroadcastReceiver {
         final String action = intent.getAction();
         Log.d(LogTags.APP_INFO.name(),"ServerUploaderReceiver starting");
         if(action != null){
-            Log.d(LogTags.APP_INFO.name(), "action is null");
+            try {
+                Thread.sleep(30000);
+            }
+            catch(Exception e){
+                Log.d(LogTags.APP_DEBUG.name(), "delay failed!");
+            }
+            Log.d(LogTags.APP_DEBUG.name(), "action is not null");
             if (action.equals(WifiManager.WIFI_STATE_ENABLED)) {
+                Log.d(LogTags.APP_DEBUG.name(), "WIFI enabled");
                 context.startService(new Intent(context, ServerUploader.class));
             }
         }

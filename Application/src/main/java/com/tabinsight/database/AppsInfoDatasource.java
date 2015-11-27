@@ -1,4 +1,4 @@
-package tabinsights.database;
+package com.tabinsight.database;
 
 import android.content.ContentValues;
 import android.content.Context;

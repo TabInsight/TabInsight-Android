@@ -28,9 +28,12 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.android.appusagestatistics;
+package com.tabinsight.usage.satistics;
 
 import android.test.ActivityInstrumentationTestCase2;
+
+import com.tabinsight.usage.satistics.AppUsageStatisticsActivity;
+import com.tabinsight.usage.satistics.AppUsageStatisticsFragment;
 
 /**
  * Tests for {@link AppUsageStatisticsActivity}.
