@@ -73,10 +73,6 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
                 0,
                 AlarmManager.INTERVAL_HALF_DAY, statCollector);
 
-        /*
-        alarms.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(),
-                60000, statCollector);
-                */
     }
 
     private void wifiPresentAlarm(Context context){

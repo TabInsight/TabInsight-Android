@@ -9,6 +9,8 @@ public enum AppNames{
     ABC_KIDS_HANDWIRTING_HWTP("com.teachersparadise.fingertracing004"),
     EPIC("com.getepic.Epic"),
     ANIMAL_SOUNDS("com.premiumsoftware.animalsoundsandphotos"),
+    F2B("air.com.myf2b.f2benterprise"),
+    SKETCH_A_SONG("com.ohnineline.sas.kids"),
     FACEBOOK("com.facebook.katana");
 
 
