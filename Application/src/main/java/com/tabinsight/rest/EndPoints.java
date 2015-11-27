@@ -1,4 +1,4 @@
-package com.tabinsights.rest;
+package com.tabinsight.rest;
 
 /**
  * Created by biphilip on 10/3/15.

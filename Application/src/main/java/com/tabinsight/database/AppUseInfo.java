@@ -1,4 +1,4 @@
-package tabinsights.database;
+package com.tabinsight.database;
 
 /**
  * Created by pushkar on 10/3/15.

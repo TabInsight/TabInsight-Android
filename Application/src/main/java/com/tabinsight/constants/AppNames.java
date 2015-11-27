@@ -1,4 +1,4 @@
-package com.tabinsights.constants;
+package com.tabinsight.constants;
 
 /**
  * Created by biphilip on 10/3/15.
@@ -7,6 +7,10 @@ public enum AppNames{
     TALLY_TOTS("air.com.spinlight.tallytots"),
     KIDS_ABC_PHONICS("com.intellijoy.android.phonics"),
     ABC_KIDS_HANDWIRTING_HWTP("com.teachersparadise.fingertracing004"),
+    EPIC("com.getepic.Epic"),
+    ANIMAL_SOUNDS("com.premiumsoftware.animalsoundsandphotos"),
+    F2B("air.com.myf2b.f2benterprise"),
+    SKETCH_A_SONG("com.ohnineline.sas.kids"),
     FACEBOOK("com.facebook.katana");
 
 

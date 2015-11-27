@@ -14,7 +14,7 @@
 * limitations under the License.
 */
 
-package com.example.android.appusagestatistics;
+package com.tabinsight.usage.satistics;
 
 import android.app.usage.UsageStats;
 import android.graphics.drawable.Drawable;
