@@ -29,6 +29,7 @@ import com.tabinsight.usage.satistics.R;
 import com.tabinsight.cronjobs.ServerUploader;
 import com.tabinsight.cronjobs.ServerUploaderReceiver;
 import com.tabinsight.cronjobs.StatsCollectionAlarmReceiver;
+import com.tabinsight.util.TabInsightApplicationContext;
 
 import java.util.Calendar;
 import java.util.TimeZone;
@@ -41,10 +42,12 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        TabInsightApplicationContext.setBroadcastRecieverClient(TabInsightApplicationContext.BroadcastRecieverClients.UI_ACTIVITY);
+
         setRecurringAlarm(this);
-        wifiPresentAlarm(this);
-        //Intent myIntent = new Intent(this, ServerUploader.class);
-        //this.startService(myIntent);
+        //wifiPresentAlarm(this);
+
         setContentView(R.layout.activity_app_usage_statistics);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
@@ -73,10 +76,6 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
                 0,
                 AlarmManager.INTERVAL_HALF_DAY, statCollector);
 
-        /*
-        alarms.setRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime(),
-                60000, statCollector);
-                */
     }
 
     private void wifiPresentAlarm(Context context){
