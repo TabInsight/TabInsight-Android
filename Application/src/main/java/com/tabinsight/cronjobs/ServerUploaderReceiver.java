@@ -9,6 +9,7 @@ import android.net.wifi.WifiManager;
 import android.util.Log;
 
 import com.tabinsight.constants.LogTags;
+import com.tabinsight.util.TabInsightApplicationContext;
 
 public class ServerUploaderReceiver extends BroadcastReceiver {
 
@@ -32,7 +33,9 @@ public class ServerUploaderReceiver extends BroadcastReceiver {
 
         final String action = intent.getAction();
 
-        sleep(WIFI_STABILISATION_TIME);
+        if(!TabInsightApplicationContext.BroadcastRecieverClients.UI_ACTIVITY.equals(TabInsightApplicationContext.getBroadcastRecieverClient())){
+            sleep(WIFI_STABILISATION_TIME);
+        }
 
         if (action != null) {
 
