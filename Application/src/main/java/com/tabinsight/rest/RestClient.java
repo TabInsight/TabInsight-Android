@@ -1,6 +1,9 @@
 package com.tabinsight.rest;
 
 import android.os.AsyncTask;
+import android.util.Log;
+
+import com.tabinsight.constants.LogTags;
 
 import org.json.JSONObject;
 
@@ -25,6 +28,7 @@ public class RestClient extends AsyncTask<String, String, String> {
         try {
             URL endpointURL = new URL(params[1]);
             URLConnection conn = endpointURL.openConnection();
+            Log.d(LogTags.APP_DEBUG.name(), params[1]);
 
             switch (method) {
                 case POST:

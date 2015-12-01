@@ -30,17 +30,23 @@ public class ServerUploaderReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
 
         Log.d(LogTags.APP_INFO.name(), "ServerUploaderReceiver starting");
+        String client = null;
+        if(TabInsightApplicationContext.getBroadcastRecieverClient()!=null){
+            client = TabInsightApplicationContext.getBroadcastRecieverClient().name();
+        }
+        Log.d(LogTags.APP_DEBUG.name(), client);
 
         final String action = intent.getAction();
 
         if(!TabInsightApplicationContext.BroadcastRecieverClients.UI_ACTIVITY.equals(TabInsightApplicationContext.getBroadcastRecieverClient())){
             sleep(WIFI_STABILISATION_TIME);
+            TabInsightApplicationContext.setBroadcastRecieverClient(TabInsightApplicationContext.BroadcastRecieverClients.SERVICE);
         }
 
         if (action != null) {
-
-            Log.d(LogTags.APP_DEBUG.name(), "action is not null");
-            if (action.equals(WifiManager.WIFI_STATE_ENABLED)) {
+            WifiManager wifi = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
+            Log.d(LogTags.APP_DEBUG.name(), "wifi has value "+ wifi.getWifiState());
+            if (wifi.getWifiState() == WifiManager.WIFI_STATE_ENABLED ) {
                 Log.d(LogTags.APP_DEBUG.name(), "WIFI enabled");
                 context.startService(new Intent(context, ServerUploader.class));
             }
