@@ -49,7 +49,7 @@ public class StatsCollector extends Service {
                     continue;
                 }
                 UsageStats usageStat = usageStatsMap.get(name);
-                Log.d(LogTags.APP_INFO.name(), usageStat.getLastTimeUsed() + "\tdummydevice" + usageStat.getPackageName() + "\t" + (usageStat.getTotalTimeInForeground()/1000));
+                Log.d(LogTags.APP_INFO.name(), usageStat.getLastTimeUsed() + "\tdummydevice\t" + usageStat.getPackageName() + "\t" + (usageStat.getTotalTimeInForeground()/1000));
                 appsInfoDatasource.createEntry(name, usageStat.getLastTimeStamp() + "", usageStat.getTotalTimeInForeground());
             }
         }

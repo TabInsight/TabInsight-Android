@@ -54,6 +54,7 @@ public class AppUsageStatisticsActivity extends ActionBarActivity {
                     .add(R.id.container, AppUsageStatisticsFragment.newInstance())
                     .commit();
         }
+        TabInsightApplicationContext.setBroadcastRecieverClient(TabInsightApplicationContext.BroadcastRecieverClients.SERVICE);
 
     }
 

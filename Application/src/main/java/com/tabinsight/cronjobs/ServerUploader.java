@@ -63,7 +63,7 @@ public class ServerUploader extends Service {
 
         }
         catch(Exception e){
-
+            e.printStackTrace();
         }
         stopSelf();
     }
