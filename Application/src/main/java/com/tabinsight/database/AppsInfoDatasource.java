@@ -4,6 +4,10 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
+import com.tabinsight.constants.LogTags;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -50,10 +54,14 @@ public class AppsInfoDatasource {
         Cursor cursor = sqLiteDatabase.query(DatabaseHelper.table_name, allColums, null, null,
                 null, null, null);
         cursor.moveToFirst();
+
+        Log.d(LogTags.APP_DEBUG.name(), "Reading from database");
+
         while(!cursor.isAfterLast()){
             AppUseInfo appUseInfo = cursorToComment(cursor);
             result.add(appUseInfo);
             cursor.moveToNext();
+            Log.d(LogTags.APP_DEBUG.name(), appUseInfo.app_name);
         }
         cursor.close();
         return result;

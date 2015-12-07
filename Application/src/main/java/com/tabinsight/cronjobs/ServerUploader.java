@@ -51,11 +51,17 @@ public class ServerUploader extends Service {
                 PhoneDetailHelper phoneDetailHelper = new PhoneDetailHelper();
                 String deviceId = phoneDetailHelper.getUniqueId(this);
 
-                params[2] = "device=" + deviceId;
-                params[3] = "access_time=" + record.access_time;
-                params[4] = "app_name=" + record.app_name;
-                params[5] = "use_time=" + record.use_time;
-                rc.execute(params);
+                String []newparams = new String[6];
+                newparams[0] = params[0];
+                newparams[1] = params[1];
+                newparams[2] = "device=" + deviceId;
+                newparams[3] = "access_time=" + record.access_time;
+                newparams[4] = "app_name=" + record.app_name;
+                newparams[5] = "use_time=" + record.use_time;
+
+                Log.d(LogTags.APP_DEBUG.name(), "uploader:"+record.app_name);
+
+                rc.execute(newparams);
             }
 
             appsInfoDatasource.truncateTable();

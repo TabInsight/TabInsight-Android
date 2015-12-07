@@ -34,7 +34,6 @@ public class ServerUploaderReceiver extends BroadcastReceiver {
         if(TabInsightApplicationContext.getBroadcastRecieverClient()!=null){
             client = TabInsightApplicationContext.getBroadcastRecieverClient().name();
         }
-        Log.d(LogTags.APP_DEBUG.name(), client);
 
         final String action = intent.getAction();
 
