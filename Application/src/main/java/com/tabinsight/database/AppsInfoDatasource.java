@@ -67,6 +67,15 @@ public class AppsInfoDatasource {
         return result;
     }
 
+    public void deleteEntry(String appName, String accessTime){
+        String clause = DatabaseHelper.app_col_name+"=? and "+DatabaseHelper.access_time_col_name+"=?";
+        String []args = {appName, accessTime};
+        sqLiteDatabase.beginTransaction();
+        sqLiteDatabase.delete(DatabaseHelper.table_name, clause, args);
+        sqLiteDatabase.endTransaction();
+        Log.d(LogTags.APP_DEBUG.name(), "Deleted row with "+appName+" "+accessTime);
+    }
+
     private AppUseInfo cursorToComment(Cursor cursor){
         AppUseInfo result = new AppUseInfo();
         result.app_name = cursor.getString(0);

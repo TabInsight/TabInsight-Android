@@ -62,6 +62,8 @@ public class ServerUploader extends Service {
                 Log.d(LogTags.APP_DEBUG.name(), "uploader:"+record.app_name);
 
                 rc.execute(newparams);
+
+                appsInfoDatasource.deleteEntry(record.app_name, record.access_time);
             }
 
             appsInfoDatasource.truncateTable();
