@@ -29,6 +29,8 @@ public class RestClient extends AsyncTask<String, String, String> {
             URL endpointURL = new URL(params[1]);
             URLConnection conn = endpointURL.openConnection();
             Log.d(LogTags.APP_DEBUG.name(), params[1]);
+            Log.d(LogTags.APP_DEBUG.name(), params[4]);
+
 
             switch (method) {
                 case POST:

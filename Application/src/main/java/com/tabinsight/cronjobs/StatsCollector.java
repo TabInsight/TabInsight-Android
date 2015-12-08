@@ -49,8 +49,8 @@ public class StatsCollector extends Service {
                     continue;
                 }
                 UsageStats usageStat = usageStatsMap.get(name);
-                Log.d(LogTags.APP_INFO.name(), usageStat.getLastTimeUsed() + "\tdummydevice\t" + usageStat.getPackageName() + "\t" + (usageStat.getTotalTimeInForeground()/1000));
-                appsInfoDatasource.createEntry(name, usageStat.getLastTimeStamp() + "", usageStat.getTotalTimeInForeground());
+                Log.d(LogTags.APP_DEBUG.name(), "In StatsCollector: "+usageStat.getLastTimeUsed() + "\tdummydevice\t" + usageStat.getPackageName() + "\t" + (usageStat.getTotalTimeInForeground()/1000));
+                appsInfoDatasource.createEntry(usageStat.getPackageName(), usageStat.getLastTimeUsed() + "", usageStat.getTotalTimeInForeground());
             }
         }
         catch(SQLException e){
